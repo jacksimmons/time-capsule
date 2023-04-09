@@ -1,3 +1,5 @@
+# Initial commit timestamp: Mar 30 2019
+
 import os
 import time
 
