@@ -1,0 +1,37 @@
+#Item tier 1 - Cost <= $500
+
+Rugged shirt, 450, Damaged trousers, 500, Worn shoes, 400, Ripped gloves, 350, Old hat, 350
+
+#Item tier 2 - Cost <= $2000
+
+Shirt, 1900, Trousers, 1800, Shoes, 1850, Gloves, 1750, Hat, 1700
+
+#Item tier 3 - Cost <= $10000
+
+Thick jumper, 9900, Tough jeans, 9800, Nimble shoes, 9850, Protective gloves, 9750, Beanie, 9700
+
+#Item tier 4 - Cost <= $50000
+
+Chainmail body armour, 49900, Chainmail leg armour, 49000, Sturdy boots, 48500, Chain gauntlets, 48000, Chain helmet, 47500
+
+#Item tier 5 - Cost <= $200000
+
+Steel chestpiece, 200000, Iron greaves, 1570, Armoured footgear, 1575, Metallic gauntlets, 1580, Armoured helm, 1570
+
+#Item tier 6 - Cost <= $500000
+
+Titanium armour, 500000, Titanium greaves, 480000, Titanium boots, 497500, Unbreakable gauntlets, 495000, Honourable helm, 490000
+
+#Item tier 7 - Cost <= $2500000
+
+Crystal core, 2500000, Holy greaves, 2500000, Winged boots, 2500000, Royal gauntlets, 2500000, Blessed battlehelm, 2500000
+
+#Vials
+
+Weak regeneration vial, 50, May cause serious side effects. Keep away from children. (Restores 15 HP), Weak restoration vial,  75,  May cause serious side effects. Keep away from children. Flammable. (Restores 15HP and 15MP), Weak magicians vial, 50, Flammable. Keep away from children. (Restores 15MP)
+Regeneration vial, 150, Will cause serious side effects. (Restores 35HP), Restoration vial, 275, Extremely flammable and corrosive. Will cause serious side effects. (Restores 35HP and 35MP), Magicians vial, 100, Extremely flammable and corrosive. (Restores 35MP)
+Potent regeneration vial, 500, Will cause immediate internal combustion. (Restores 100HP), Potent restoration vial, 750, Death is imminent. (Restores 100HP and 100MP), Potent magicians vial, 500, Will explode when in contact with anything. (Restores 100MP)
+
+#Berries
+
+Aggressive berry, 1000, Increases your POW by 1 permanently., Fortitude berry, 1000, Increases your HP by 1 permanently, Tactical
