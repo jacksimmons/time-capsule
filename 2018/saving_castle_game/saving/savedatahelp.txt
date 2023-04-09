@@ -1,0 +1,70 @@
+Player level, Construction level, Research level
+Power
+Troop power
+Building power
+Research power
+Player power
+Quest power
+Misc power
+Castle level, Vault level, Academy level, Barracks level, Recon zone level, Stable level, Helipad level, Workshop level
+Farm level, Lumberyard level, Quarry level, Mine level, Silver drill level, Gold refinery level, Crystal factory level, Overseer's office level
+Friendly infantry buffs (Attack, Defense, Health, Morale, Crit dmg, Crit def)
+Friendly archer buffs (Attack, Defense, Health, Morale, Crit dmg, Crit def)
+Friendly cavalry buffs (Attack, Defense, Health, Morale, Crit dmg, Crit def)
+Friendly airbourne buffs (Attack, Defense, Health, Morale, Crit dmg, Crit def)
+Friendly seige buffs (Attack, Defense, Health, Crit dmg, Crit def)
+Friendly army buffs (Attack, Defense, Health, Morale, Crit dmg, Crit def)
+Construction speed 1
+Construction speed 2
+Construction speed 3
+Scout 1
+Scout 2
+Scout 3
+Travel speed 1
+Travel speed 2
+Travel speed 3
+Food storage
+Timber storage
+Stone storage
+Metal storage
+Silver storage
+Gold storage
+Enemy infantry debuffs (Attack, Defense, Health, Morale, Crit dmg, Crit def)
+Enemy archer debuffs (Attack, Defense, Health, Morale, Crit dmg, Crit def)
+Enemy cavalry debuffs (Attack, Defense, Health, Morale, Crit dmg, Crit def)
+Enemy airbourne debuffs (Attack, Defense, Health, Morale, Crit dmg, Crit def)
+Enemy seige debuffs (Attack, Defense, Health, Crit dmg, Crit def)
+Enemy army debuffs (Attack, Defense, Health, Morale, Crit dmg, Crit def)
+Full army infantry buffs (Attack, Defense, Health, Travel speed) [Buffs when an army of all infantry is sent]
+Full army archer buffs (Attack, Defense, Health, Travel speed) [Buffs when an army of all archers is sent]
+Full army cavalry buffs (Attack, Defense, Health, Travel speed) [Buffs when an army of all cavalry is sent]
+Full army airbourne buffs (Attack, Defense, Health, Travel speed) [Buffs when an army of all airbourne is sent]
+One-tier army buffs (+Attack
++Defense
++Health
++Speed) [Buffs when an army of only one tier is sent]
+Pre-emptive strike (-Enemy tier 1 damage, defense, health, morale, crit dmg, crit def, march speed) [Only works on defense]
+Pre-emptive strike mk.2 (-Enemy tier 2 damage, defense, health, morale, crit dmg, crit def, march speed) [Only works on defense]
+Pre-emptive strike mk.3 (-Enemy tier 3 damage, defense, health, morale, crit dmg, crit def, march speed) [Only works on defense]
+Pre-emptive strike mk.4 (-Enemy tier 4 damage, defense, health, morale, crit dmg, crit def, march speed) [Only works on defense]
+Pre-emptive strike mk.5 (-Enemy tier 5 damage, defense, health, morale, crit dmg, crit def, march speed) [Only works on defense]
+Infantry tier 6 preemptive strike (-damage, defense, health, morale, crit dmg, crit def, march speed) [Only works on defense]
+Archer tier 6 preemptive strike (-damage, defense, health, morale, crit dmg, crit def, march speed) [Only works on defense]
+Cavalry tier 6 preemptive strike (-damage, defense, health, morale, crit dmg, crit def, march speed) [Only works on defense]
+Airbourne tier 6 preemptive strike (-damage, defense, health, morale, crit dmg, crit def, march speed) [Only works on defense]
+Seige tier 6 preemptive strike (-damage, defense, health, morale, crit dmg, crit def, march speed) [Only works on defense]
+Sabotage [same as preemptive strike but only for offense]
+Sabotage mk.2 [same as preemptive strike but only for offense]
+Sabotage mk.3 [same as preemptive strike but only for offense]
+Sabotage mk.4 [same as preemptive strike but only for offense]
+Sabotage mk.5 [same as preemptive strike but only for offense]
+Infantry tier 6 Sabotage
+Archer tier 6 Sabotage
+Cavalry tier 6 Sabotage
+Airbourne tier 6 Sabotage
+Seige tier 6 Sabotage
+Infantry troop tier unlocked
+Archer troop tier unlocked
+Cavalry troop tier unlocked
+Airbourne troop tier unlocked
+Seige troop tier unlocked

@@ -1,0 +1,65 @@
+['00','00','00','00','00','00'] basicplayerinfo
+0
+0
+0
+0
+0
+0
+0
+['01','00','00','00','00','00','00','00'] bld.basic
+['00','00','00','00','00','00','00','00'] bld.prd
+['00','00','00','00','00','00'] rsc.inf
+['00','00','00','00','00','00'] rsc.arch
+['00','00','00','00','00','00'] rsc.cav
+['00','00','00','00','00','00'] rsc.air
+['00','00','00','00','00'] rsc.sei
+['00','00','00','00','00','00'] rsc.arm
+00
+00
+00
+00
+00
+00
+00
+00
+00
+['00','00','00','00','00','00'] rsc.einf
+['00','00','00','00','00','00'] rsc.earch
+['00','00','00','00','00','00'] rsc.ecav
+['00','00','00','00','00','00'] rsc.eair
+['00','00','00','00','00'] rsc.esei
+['00','00','00','00','00','00'] rsc.earm
+['10','10','10'] rsc.cstr
+00 rsc.fuinar
+00 rsc.fuarar
+00 rsc.fucaar
+00 rsc.fuaiar
+00 rsc.1tierdmg
+00 rsc.1tierdef
+00 rsc.1tierhp
+00 rsc.1tierspd
+00 rsc.pstr1
+00 rsc.pstr2
+00 rsc.pstr3
+00 rsc.pstr4
+00 rsc.pstr5
+00 rsc.pstr6inf
+00 rsc.pstr6arch
+00 rsc.pstr6cav
+00 rsc.pstr6air
+00 rsc.pstr6sei
+00 rsc.sab1
+00 rsc.sab2
+00 rsc.sab3
+00 rsc.sab4
+00 rsc.sab5
+00 rsc.sab6inf
+00 rsc.sab6arch
+00 rsc.sab6cav
+00 rsc.sab6air
+00 rsc.sab6sei
+00 rsc.inti
+00 rsc.arti
+00 rsc.cati
+00 rsc.aiti
+00 rsc.seti
