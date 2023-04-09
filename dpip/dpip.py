@@ -1,6 +1,5 @@
 import os
 import sys
-import shutil
 
 # A program to fix pip not installing packages to the correct directory
 def main(args, dest_dir):
