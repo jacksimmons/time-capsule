@@ -1,0 +1,330 @@
+                                      Unlock Farm
+                                           ¦
+                                           v
+                         Unlock Scout              Food Production 1
+                              ¦                          ¦
+                              v                          v
+                            ----------Infantry HP----------
+                                           ¦
+                                           v
+                                   Unlock Barracks
+                                           ¦
+                                           v
+                    Scout Effectiveness 1      Construction Speed 1
+                                ¦                     ¦
+                                v                     v
+                            -----------Archer HP-----------
+                                           ¦
+                                           v
+                                    Unlock Lumberyard
+                                           ¦
+                                           v
+                     Scout Travel Speed 1       Timber Production 1
+                                ¦                     ¦
+                                v                     v
+                            -----------Cavalry HP-----------
+                                           ¦
+                                           v
+                                    Unlock Recon Zone
+                                           ¦
+                                           v
+                     Air Travel Speed 1       Barracks Capacity 1
+                                ¦                     ¦
+                                v                     v
+                          -----------Airbourne HP-----------
+                                           ¦
+                                           v
+                                     Unlock Quarry
+                                           ¦
+                                           v
+                      Cav Travel Speed 1       Stone Production 1
+                                ¦                     ¦
+                                v                     v
+                            -----------Seige HP-----------
+                                           ¦
+                                           v
+                                     Unlock Tier 2
+
+                                     Unlock Stable
+                                          ¦
+                                          v
+                     Arch Travel Speed 1      Recon Zone Capacity 1
+                               ¦                     ¦
+                               v                     v
+                            -----------Wall HP-----------
+                                          ¦
+                                          v
+                                      Unlock Mine
+                                          ¦
+                                          v
+                    Inf Travel Speed 1      Metal Production 1
+                              ¦                     ¦
+                              v                     v
+                         -----------Seige Def-----------
+                                         ¦
+                                         v
+                                     Unlock Helipad
+                                         ¦
+                                         v
+                    Seige Travel Speed 1      Stable Capacity 1
+                             ¦                     ¦
+                             v                     v
+                        -----------Airbourne Def-----------
+                                        ¦
+                                        v
+                                Unlock Silver Drill
+                                        ¦
+                                        v
+                   Army Travel Speed 1     Silver Production 1
+                            ¦                     ¦
+                            v                     v
+                       -----------Cavalry Def-----------
+                                       ¦
+                                       v
+                                Unlock Workshop
+                                       ¦
+                                       v
+                  Training Speed 1       Helipad Capacity 1
+                           ¦                     ¦
+                           v                     v
+                      -----------Archer Def-----------
+                                      ¦
+                                      v
+                              Unlock Trap Factory
+                                      ¦
+                                      v
+                  Trap Building Spd 1   Trap Factory Capacity 1
+                           ¦                     ¦
+                           v                     v
+                      -----------Infantry Def-----------
+                                      ¦
+                                      v
+                    Unlock Watchtower   Unlock Shop
+                                      ¦
+                                      v
+                                Unlock Tier 3
+
+                              Unlock Gold Refinery
+                                      ¦
+                                      v
+                  Vault Capacity 1       Workshop Capacity 1
+                           ¦                     ¦
+                           v                     v
+                      -----------Wall Def-----------
+                                      ¦
+                                      v
+                              Unlock Hospital
+                                      ¦
+                                      v
+                  Gold Production 1       Healing Speed 1
+                           ¦                     ¦
+                           v                     v
+                           Unlock Tier 4 (Inf,Air,Seige)
+
+                  -----------Food Production 2-----------
+                                      ¦
+                                      v
+    Construction Speed 2   Scout Effectiveness 2   Scout Travel Speed 2
+                                      ¦
+                                      v
+       Timber Production 2   Stone Production 2   Metal Production 2
+                                      ¦
+                                      v
+Airbourne Travel Speed 2   Archer Travel Speed 2    Cavalry Travel speed 2
+                                      ¦
+                                      v
+      Infantry Travel Speed 2  Army Travel Speed 2  Seige Travel Speed 2
+                                      ¦
+                                      v
+                    Infantry Dmg   Seige Dmg   Airbourne Dmg
+                                      ¦
+                                      v
+                    Cavalry Dmg   Trap Dmg   Archer Dmg
+                                      ¦
+                                      v
+                          Unlock Tier 4 (Cav,Arch,Traps)
+
+              -----------Unlock Advanced Tactics Lab-----------
+                                      ¦
+                                      v
+  Infantry Crit Dmg   Archer Crit Dmg   Cavalry Crit Dmg   Airbourne Crit Dmg
+                                      ¦
+                                      v
+       Trap Crit Dmg   Seige Crit Dmg   Seige Crit Def   Trap Crit Def
+                                      ¦
+                                      v
+  Infantry Crit Def   Archer Crit Def   Cavalry Crit Def   Airbourne Crit Def
+                                      ¦
+                                      v
+Full Inf Army Dmg   Full Inf Army Def   Full Inf Army HP   Full Inf Army Speed
+                                      ¦
+                                      v
+Full Arch Army Dmg  Full Arch Army Def  Full Arch Army HP  Full Arch Army Speed
+                                      ¦
+                                      v
+Full Cav Army Dmg   Full Cav Army Def   Full Cav Army HP   Full Cav Army Speed
+                                      ¦
+                                      v
+Full Air Army Dmg   Full Air Army Def   Full Air Army HP   Full Air Army Speed
+                                      ¦
+                                      v
+                          Unlock Tier 5 (Seige,Traps)
+
+              -----------Unlock Enemy Sabotage Station-----------
+                                      ¦
+                                      v
+        Infantry Morale  Archer Morale  Cavalry Morale  Airbourne Morale
+                                      ¦
+                                      v
+               Enemy Trap HP   Enemy Trap Def   Enemy Trap Dmg
+                                      ¦
+                                      v
+Enemy Trap Crit Dmg,Enemy Trap Crit Def,Enemy Seige Crit Def,EnemySeige Crit Dmg
+                                      ¦
+                                      v
+              Tier 1 preemptive strike  Tier 1 sabotage
+                                      ¦
+                                      v
+Enemy Airbourne HP   Enemy Cavalry HP   Enemy Archer HP   Enemy Infantry HP
+                                      ¦
+                                      v
+Enemy Airbourne Def   Enemy Cavalry Def   Enemy Archer Def   Enemy Infantry Def
+                                      ¦
+                                      v
+              Tier 2 preemptive strike  Tier 2 sabotage
+                                      ¦
+                                      v
+Enemy Airbourne Dmg   Enemy Cavalry Dmg   Enemy Archer Dmg   Enemy Infantry Dmg
+                                      ¦
+                                      v
+                          Unlock Tier 5 (Airbourne,Archers)
+
+              Tier 3 preemptive strike  Tier 3 sabotage
+                                      ¦
+                                      v
+               Tier 1 HP   Tier 1 Dmg   Tier 1 Def   Tier 1 Spd
+                                      ¦
+                                      v
+              Tier 4 preemptive strike  Tier 4 sabotage
+                                      ¦
+                                      v
+                            Trap Factory Capacity 2
+                                      ¦
+                                      v
+Food Production 3  Scout Effectiveness 3  Training Speed 2   Barracks Capacity 2
+                                      ¦
+                                      v
+Timber Production 3   Construction Speed 3   Recon Zone Capacity 2   Stable Capacity 2
+                                      ¦
+                                      v
+Stone Production 3   Scout Travel Speed 3   Helipad Capacity 2   Workshop Capacity 2
+                                      ¦
+                                      v
+              Tier 2 HP   Tier 2 Dmg   Tier 2 Def   Tier 2 Spd
+                                      ¦
+                                      v
+                        Unlock Tier 5 (Infantry,Cavalry)
+
+                              Metal Production 3
+                                      ¦
+                                      v
+Infantry Travel Speed 3  Archer Travel Speed 3   Cavalry Travel Speed 3   Seige Travel Speed 3
+                                      ¦
+                                      v
+                  Silver Production 2   Unlock Crystal Factory
+                                      ¦
+                                      v
+ Enemy Inf Morale   Enemy Arch Morale   Enemy Cav Morale   Enemy Air Morale
+                                      ¦
+                                      v
+Enemy Inf Crit Def Enemy Arch Crit Def Enemy Cav Crit Def Enemy Air Crit Def
+                                      ¦
+                                      v
+Enemy Inf Crit Dmg Enemy Arch Crit Dmg Enemy Cav Crit Dmg Enemy Air Crit Dmg
+                                      ¦
+                                      v
+                            Unlock Tier 6 (Traps)
+
+                            Crystal Production 1
+                                      ¦
+                                      v
+              Tier 3 HP   Tier 3 Dmg   Tier 3 Def   Tier 3 Spd
+                                      ¦
+                                      v
+              Tier 5 preemptive strike  Tier 5 sabotage
+                                      ¦
+                                      v
+          Gold Production 2   Training Speed 3   Trap Factory Capacity 3
+                                      ¦
+                                      v
+Barracks Capacity 3   Recon Zone Capacity 3   Stable Capacity 3   Workshop Capacity 3
+                                      ¦
+                                      v
+                            Unlock Tier 6 (Seige)
+
+                            Silver Production 3
+                                      ¦
+                                      v
+              Tier 4 HP   Tier 4 Dmg   Tier 4 Def   Tier 4 Spd
+                                      ¦
+                                      v
+                            Tier 5 HP   Tier 6 Seige sabotage
+                                      ¦
+                                      v
+Tier 6 Airbourne Preemptive Strike  Tier 5 Def   Tier 6 Infantry Preemptive Strike
+                                      ¦
+                                      v
+Tier 6 Cavalry Preemptive Strike  Tier 5 Dmg   Tier 6 Archer Preemptive Strike
+                                      ¦
+                                      v
+                            Unlock Tier 6 (Infantry)
+
+                              Crystal Production 2
+                                      ¦
+                                      v
+Tier 6 Seige Preemptive Strike   Tier 5 Spd   Tier 6 Infantry Sabotage
+                                      ¦
+                                      v
+  Tier 6 Archer Sabotage   Tier 6 Def   Tier 6 HP   Tier 6 Cavalry Sabotage
+                                      ¦
+                                      v
+  Tier 6 Airbourne Sabotage   Tier 6 Dmg   Tier 6 Spd   Gold Production 3
+                                      ¦
+                                      v
+                            Unlock Tier 6 (Archers)
+                                      ¦
+                                      v
+                              Crystal Production 3
+                                      ¦
+                                      v
+                        Army HP   Army Morale   Army Def
+                                      ¦
+                                      v
+                   Army Crit Def   Army Dmg   Army Crit Dmg
+                                      ¦
+                                      v
+        Enemy Army Crit Def   Enemy Army Morale   Enemy Army Crit Dmg
+                                      ¦
+                                      v
+                Enemy Army HP   Enemy Army Def   Enemy Army Dmg
+                                      ¦
+                                      v
+                            Unlock Tier 6 (Cavalry)
+                                      ¦
+                                      v
+          Enemy Infantry Speed Debuff   Enemy Archer Speed Debuff
+                                      ¦
+                                      v
+          Enemy Cavalry Speed Debuff   Enemy Airbourne Speed Debuff
+                                      ¦
+                                      v
+  Enemy Wall HP Debuff   Enemy Wall Crit Def Debuff   Enemy Wall Def Debuff
+                                      ¦
+                                      v
+                    Enemy Seige Speed   Enemy Scout Speed
+                                      ¦
+                                      v
+                           Enemy Army Speed Debuff
+                                      ¦
+                                      v
+                          Unlock Tier 6 (Airbourne)                     
