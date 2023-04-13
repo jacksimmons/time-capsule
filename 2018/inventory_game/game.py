@@ -1,4 +1,6 @@
 from heroes import Combatant, Hero, Enemy
+from items import *
+from defaults import default_input
 
 import sys
 import json
@@ -100,19 +102,27 @@ def capitalise(string: str):
 #~~~~~~~~~~~~~~GAMELOOP~~~~~~~~~~~~~~#
 
 def get_random_enemy_name() -> str:
-    rand = random.randint(1,100)
     cls()
-    if rand in range (1,10):
-        enemy = "Vladimir Spock"
-    elif rand in range (11,30):
-        enemy = "Mr. MyMaths"
-    elif rand in range (31,50):
-        enemy = "Mrs. Adams"
-    elif rand == 51:
-        enemy = "Colin Hegarty"
-    else:
-        enemy = "Charlie Duggan"
-    return enemy    
+    total_weight = 0
+    data:dict={}
+
+    # Get data
+    with open("data.json", "r") as file:
+        data = json.load(file)["encounter"]
+
+    # Calculate total weight
+    for data_item in data.keys():
+        total_weight += data[data_item]
+    
+    # Get a random value in 0, total_weight
+    # Get the item which is closest to the random value
+    # Done by adding to a sum the value of the enemy
+    rand_value = random.random() * total_weight
+    sum_so_far = 0
+    for data_item in data.keys():
+        sum_so_far += data[data_item]
+        if (sum_so_far >= rand_value):
+            return data_item
 
 def get_enemy() -> Enemy:
     enemy_name = get_random_enemy_name()
@@ -155,18 +165,12 @@ def get_hero_from_user() -> str:
     while True:
         cls()
         hero = ""
-        hero_class = input("""
-Select a hero type:
-        
+        hero_class = input("""Select a hero type:
         (t)Tank - Can take a beating at the cost of speed
-
         (f)Fighter - Very agile yet frail
-
         (a)Archer - Skilled, attacks from afar
-
         (s)Sorceror - Intelligent and packs a punch
-        
-q - Go back\n\n> """).lower()
+q - Go back\n> """).lower()
         if hero_class in hero_classes:
             if len(hero_class) == 1:
                 hero_class = hero_classes[hero_classes.index(hero_class) - 1]
@@ -182,7 +186,7 @@ q - Go back\n\n> """).lower()
 
             cls()
             hero_input = \
-                input(f"Select a hero!\n{stats}\nq - Go back\n> """).lower()
+                input(f"Select a hero!\n{stats}q - Go back\n> ").lower()
             hero = hero_input \
                 if hero_input in hero_options else ""
 
@@ -220,17 +224,24 @@ def adjust_hero_name(hero_name: str) -> str:
     else:
         raise Exception("Hero name can't be longer than " + HERO_NAME_LIMIT + " characters.")
 
-def render_UI(adj_hero, hero_hp, adj_enemy, enemy_hp):
+def render_UI(hero: Hero, enemy: Enemy):
+    adjusted_enemy_name = adjust_enemy_name(enemy.name)
+    adjusted_hero_name = adjust_hero_name(hero.name)
     cls()
-    spaces = (36 - len(str(hero_hp)) - len(str(enemy_hp))) * " "
+    spaces = (34 - len(str(hero.HP)) - len(str(enemy.HP)) - len(str(hero.MAX_HP)) - len(str(enemy.MAX_HP))) * " "
     print("┌--------------------------------------------------------------------------------┐")
-    print(f"|{adj_hero}: {hero_hp}{spaces}{adj_enemy}: {enemy_hp}|")
+    print(f"|{adjusted_hero_name}: {hero.HP}/{hero.MAX_HP}{spaces}{adjusted_enemy_name}: {enemy.HP}/{enemy.MAX_HP}|")
     print("└--------------------------------------------------------------------------------┘")
+
+# Waits for user input, then renders UI, then returns the input
+def render_UI_on_input(hero: Hero, enemy: Enemy) -> str:
+    value = default_input()
+    render_UI(hero, enemy)
+    return value
 
 def show_stats(hero: Hero, enemy: Enemy):
     cls()
-    print(f"""
-You will face {enemy.name}!
+    print(f"""You will face {enemy.name}!
 Stats:
         HP: {str(enemy.HP)}
         AGI: {str(enemy.AGI)}
@@ -241,16 +252,13 @@ Your stats are:
         HP: {str(hero.HP)}
         AGI: {str(hero.AGI)}
         POW: {str(hero.POW)}""")
-    input()
+    input("\n> ")
     cls()
     print("\n\n\n\t\t\t\t\t\t\tFIGHT!")
     time.sleep(0.5)
 
 def fight(hero: Hero, enemy: Enemy):
     global BATTLE_OPTIONS
-
-    adjusted_enemy_name = adjust_enemy_name(enemy.name)
-    adjusted_hero_name = adjust_hero_name(hero.name)
     
     # Decide who starts
     if (hero.AGI > enemy.AGI):
@@ -264,38 +272,48 @@ def fight(hero: Hero, enemy: Enemy):
         else:
             turn = 0
 
-    while True:
-        render_UI(adjusted_hero_name, hero.HP, adjusted_enemy_name, enemy.HP)
-        
+    render_UI(hero, enemy)
+
+    while True:        
         if enemy.HP == 0 or hero.HP == 0:
             break
         
         if turn == 1:
             hero.blocking = False
-            choice = input("""
-What do you want to do?
-
+            print("Your turn.")
+            choice = input("""What do you want to do?
         (a)Attack
-
-        (d)Defend
-
+        (b)Block
         (i)Item
-
-        (f)Flee\n\n> """).lower()
+        (f)Flee
+> """).lower()
+            render_UI(hero, enemy)
             if choice in BATTLE_OPTIONS:
                 if choice in ["attack", "a"]:
-                    print(hero.name + " will now attack.")
-                    input()
-                    enemy.take_damage(hero.calc_damage())
-                    input()
+                    hero.action_attack(enemy)
                 elif choice in ["block", "b"]:
-                    hero.blocking = True
+                    hero.action_block()
                 elif choice in ["item", "i"]:
-                    pass
+                    print(f"Inventory:\n{hero.inventory.get_items()}")
+                    while True:
+                        item = input("q - Cancel\nSelect an item:\n> ")
+                        render_UI(hero, enemy)
+                        # If an item was successfully used, end the turn
+                        if hero.use_item(item):
+                            render_UI_on_input(hero, enemy)
+                            turn = 0
+                            break
+                        else:
+                            # If it was unsuccessful, restart the turn without changing turn
+                            break
+                    turn = 0
+                    continue # Skip the UI render, we did it conditionally in the while loop
                 elif choice in ["flee", "f"]:
                     pass
                 turn = 0
         elif turn == 0:
+            print("Enemy's turn.")
+            render_UI_on_input(hero, enemy)
             enemy.blocking = False
             weighting = [0.8, 0.1, 0.1]
             if (enemy.HP < hero.POW):
@@ -322,19 +340,41 @@ What do you want to do?
                 action = "Attack"
             
             if action == "Attack":
-                print(enemy.name + " will now attack.")
-                input()
-                hero.take_damage(enemy.calc_damage())
-                input()
+                enemy.action_attack(hero)
             elif action == "Block":
-                enemy.blocking = True
+                enemy.action_block()
+            elif action == "Item":
+                # The enemy wants to use an item.
+                # If they have an item, use it, otherwise block
+                if enemy.inventory != [] and enemy.HP != enemy.MAX_HP:
+                    enemy.dict_to_stats(enemy.inventory.use_item(enemy.inventory.items[0], enemy.stats_to_dict()))
+                else:
+                    enemy.action_block()
             turn = 1
+        render_UI_on_input(hero, enemy)
 
-def setup() -> bool:
-    enemy: Enemy = get_enemy()
-    hero : Hero  = get_hero()
+def finish_setup(hero: Hero, enemy: Enemy) -> bool:
     if (hero == None or enemy == None):
         return False
+    
+    hero.inventory.add_item(YazooMilk())
+    hero.inventory.add_item(YazooMilk())
+    hero.inventory.add_item(YazooMilk())
+
+    enemy.inventory.add_item(YazooMilk())
+    enemy.inventory.add_item(YazooMilk())
+    enemy.inventory.add_item(YazooMilk())
+
     show_stats(hero, enemy)
     fight(hero, enemy)
     return True
+
+def new_game_setup() -> bool:
+    hero : Hero  = get_hero()
+    enemy: Enemy = get_enemy()
+    return finish_setup(hero, enemy)
+
+def load_save_setup() -> bool:
+    hero : Hero = Hero.load_from_save()
+    enemy: Enemy = get_enemy()
+    return finish_setup(hero, enemy)
