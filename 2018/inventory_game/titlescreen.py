@@ -33,8 +33,9 @@ def titleinput():
         loadgameinput = titlescreen()
         if loadgameinput == 'p':
             cls()
-            setup()
-            input()
+            # If unsuccessful, an enter press will already have been done to exit
+            if (setup()):
+                input()
         if loadgameinput == 'h':
             print("Help goes here")
         elif loadgameinput == 'q':

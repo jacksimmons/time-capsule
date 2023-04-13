@@ -17,11 +17,12 @@ class Combatant:
     
     # Base die method, overwritten in Hero and Enemy
     def get_stats(self) -> str:
-        return f"""{self.name}
-    HP: {self.HP},
-    AGI: {self.AGI},
-    POW: {self.POW},
-    LCK: {self.LCK}"""
+        return f"""
+{self.name}
+        HP: {self.HP},
+        AGI: {self.AGI},
+        POW: {self.POW},
+        LCK: {self.LCK}"""
     
     def die(self):
         print(self.name + " was defeated.")

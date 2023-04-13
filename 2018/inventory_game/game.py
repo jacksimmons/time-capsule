@@ -156,22 +156,24 @@ def get_hero_from_user() -> str:
         cls()
         hero = ""
         hero_class = input("""
-        Select a hero type:
+Select a hero type:
         
-        \t\tTank - Can take a beating at the cost of speed
+        (t)Tank - Can take a beating at the cost of speed
+
+        (f)Fighter - Very agile yet frail
+
+        (a)Archer - Skilled, attacks from afar
+
+        (s)Sorceror - Intelligent and packs a punch
         
-        \t\tFighter - Very agile yet frail
-        
-        \t\tArcher - Skilled, attacks from afar
-        
-        \t\tSorceror - Intelligent and packs a punch\n\n> """).lower()
+q - Go back\n\n> """).lower()
         if hero_class in hero_classes:
             if len(hero_class) == 1:
                 hero_class = hero_classes[hero_classes.index(hero_class) - 1]
             subclasses = heroes[hero_class].keys()
 
             stats:str = ""
-            hero_options:list = ["B"]
+            hero_options:list = ["q"]
             for subclass in subclasses:
                 stats += json_to_combatant(heroes[hero_class], subclass).get_stats()
                 stats += "\n"
@@ -180,22 +182,28 @@ def get_hero_from_user() -> str:
 
             cls()
             hero_input = \
-                input(f"Select a hero!\n{stats}\n[^b to go back]\n> """).lower()
+                input(f"Select a hero!\n{stats}\nq - Go back\n> """).lower()
             hero = hero_input \
                 if hero_input in hero_options else ""
 
-            if (hero == "B"):
-                break
+            if (hero == "q"):
+                pass
             elif (hero != ""):
                 if (len(hero) == 1):
                     # The qualified name is one index before the shortcut
                     return hero_options[hero_options.index(hero) - 1], hero_class
                 return hero, hero_class
-        elif hero_class not in hero_classes:
+        elif hero_class == "q":
+            break
+        else:
             print("Pick a valid class!")
+
+    return None, None
 
 def get_hero() -> Hero:
     hero_name, hero_base_class_name = get_hero_from_user()
+    if (hero_name, hero_base_class_name) == (None, None):
+        return None
 
     with open("data.json", "r") as file:
         data = json.load(file)["heroes"][hero_base_class_name][hero_name.lower()]
@@ -222,14 +230,14 @@ def render_UI(adj_hero, hero_hp, adj_enemy, enemy_hp):
 def show_stats(hero: Hero, enemy: Enemy):
     cls()
     print(f"""
-    You will face {enemy.name}!
-    Stats:
+You will face {enemy.name}!
+Stats:
         HP: {str(enemy.HP)}
         AGI: {str(enemy.AGI)}
         POW: {str(enemy.POW)}""")
     print(f"""
-    You selected the hero {hero.name}.
-    Your stats are:
+You selected the hero {hero.name}.
+Your stats are:
         HP: {str(hero.HP)}
         AGI: {str(hero.AGI)}
         POW: {str(hero.POW)}""")
@@ -265,15 +273,15 @@ def fight(hero: Hero, enemy: Enemy):
         if turn == 1:
             hero.blocking = False
             choice = input("""
-            What do you want to do?
-            
-            Attack
-            
-            Defend
-            
-            Item
-            
-            Flee\n\n> """).lower()
+What do you want to do?
+
+        (a)Attack
+
+        (d)Defend
+
+        (i)Item
+
+        (f)Flee\n\n> """).lower()
             if choice in BATTLE_OPTIONS:
                 if choice in ["attack", "a"]:
                     print(hero.name + " will now attack.")
@@ -322,8 +330,11 @@ def fight(hero: Hero, enemy: Enemy):
                 enemy.blocking = True
             turn = 1
 
-def setup():
+def setup() -> bool:
     enemy: Enemy = get_enemy()
     hero : Hero  = get_hero()
+    if (hero == None or enemy == None):
+        return False
     show_stats(hero, enemy)
     fight(hero, enemy)
+    return True
