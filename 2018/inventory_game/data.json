@@ -1,0 +1,134 @@
+{
+	"heroes" : 
+	{
+		"tank" : {
+			"juggernaut" : {
+				"hp" : 20,
+				"agi": 1,
+				"pow": 15,
+				"lck": 4
+			},
+			
+			"gladiator" : {
+				"hp" : 17,
+				"agi": 5,
+				"pow": 14,
+				"lck": 4
+			},
+			
+			"revenant" : {
+				"hp" : 19,
+				"agi": 2,
+				"pow": 18,
+				"lck": 1
+			}
+		},
+		
+		"fighter" : {
+			"assassin" : {
+				"hp" : 5,
+				"agi": 15,
+				"pow": 15,
+				"lck": 5
+			},
+			
+			"ninja" : {
+				"hp" : 4,
+				"agi": 20,
+				"pow": 12,
+				"lck": 4
+			},
+			
+			"knight" : {
+				"hp" : 9,
+				"agi": 13,
+				"pow": 6,
+				"lck": 12
+			}
+		},
+		
+		"archer" : {
+			"bowmaster" : {
+				"hp" : 7,
+				"agi": 12,
+				"pow": 11,
+				"lck": 10
+			},
+			
+			"sniper" : {
+				"hp" : 6,
+				"agi": 10,
+				"pow": 13,
+				"lck": 11
+			},
+			
+			"demolitionist" : {
+				"hp" : 5,
+				"agi": 11,
+				"pow": 15,
+				"lck": 9
+			}
+		},
+
+		"sorceror" : {
+			"wizard" : {
+				"hp" : 6,
+				"agi": 9,
+				"pow": 17,
+				"lck": 8
+			},
+			
+			"cleric" : {
+				"hp" : 5,
+				"agi": 7,
+				"pow": 13,
+				"lck": 15
+			},
+			
+			"summoner" : {
+				"hp" : 10,
+				"agi": 7,
+				"pow": 13,
+				"lck": 10
+			}
+		}
+	},
+
+	"enemies" :
+	{
+		"vladimir spock" : {
+			"hp" : 70,
+			"agi": 80,
+			"pow": 1,
+			"lck": 0
+		},
+		
+		"mr. mymaths" : {
+			"hp" : 50,
+			"agi": 150,
+			"pow": 2,
+			"lck": 0
+		},
+		
+		"mrs. adams" : {
+			"hp" : 100,
+			"agi": 20,
+			"pow": 2,
+			"lck": 0
+		},
+		
+		"colin hegarty" : {
+			"hp" : 30,
+			"agi": 100,
+			"pow": 2,
+			"lck": 0
+		},
+		
+		"charlie duggan" : {
+			"hp" : 10,
+			"agi": 40,
+			"pow": 3,
+			"lck": 0
+		}
+	}
+}
